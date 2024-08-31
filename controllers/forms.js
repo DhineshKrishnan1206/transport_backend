@@ -62,7 +62,7 @@ exports.getAllEntries = async (req, res) => {
 // Handler for GET request to retrieve a single form entry by ID
 exports.getEntryById = async (req, res) => {
     try {
-        const { id } = req.params;
+        const { id } = req.body;
 
         // Validate ID
         if (!mongoose.isValidObjectId(id)) {
