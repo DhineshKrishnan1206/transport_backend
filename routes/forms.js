@@ -9,6 +9,6 @@ router.post('/submit', formController.submitForm);
 router.get('/entries', formController.getAllEntries);
 
 // GET endpoint to retrieve a single form entry by ID
-router.get('/entries/getById', formController.getEntryById);
+router.get('/entries/:id', formController.getEntryById);
 
 module.exports = router;

@@ -1,5 +1,5 @@
 const FormEntry = require('../models/entry');
-
+const mongoose = require('mongoose');
 // Handler for POST request to submit form data
 exports.submitForm = async (req, res) => {
     try {
@@ -62,7 +62,7 @@ exports.getAllEntries = async (req, res) => {
 // Handler for GET request to retrieve a single form entry by ID
 exports.getEntryById = async (req, res) => {
     try {
-        const { id } = req.body;
+        const { id } = req.params;
 
         // Validate ID
         if (!mongoose.isValidObjectId(id)) {
