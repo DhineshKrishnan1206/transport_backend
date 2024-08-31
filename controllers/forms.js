@@ -64,10 +64,7 @@ exports.getEntryById = async (req, res) => {
     try {
         const { id } = req.params;
 
-        // Validate ID
-        if (!mongoose.isValidObjectId(id)) {
-            return res.status(400).json({ error: 'Invalid ID format' });
-        }
+        
 
         const entry = await FormEntry.findById(id);
 
